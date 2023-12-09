@@ -130,11 +130,17 @@ var backButton = document.querySelector(".back-to-main");
 // "Nevermind, take me back!"
 var nevermindButton = document.querySelector(".show-main");
 // "Show Saved Posters"
+<<<<<<< HEAD
 var showSavedPosterButton = document.querySelector(".show-saved");
 // "Show my poster"
 var showMyPosterButton = document.querySelector(".make-poster");
 // "Save This Poster"
 var savedPosterButton = document.querySelector(".save-poster");
+=======
+var savedPosterButton = document.querySelector(".show-saved");
+// "Show my poster"
+var showMyPosterButton = document.querySelector(".make-poster");
+>>>>>>> 4d063ed0155d4c462ef169b9cc0fcb8b26788a6a
 //----------------------------------------------//
 
 //----------------------------------------------//
@@ -156,15 +162,23 @@ randomPosterButton.addEventListener("click", displayPoster);
 // "Make Your Own Poster" Button: Click Listener
 formPosterButton.addEventListener("click", displayPosterForm);
 // "Show Saved Posters" Button: Click Listener
+<<<<<<< HEAD
 showSavedPosterButton.addEventListener("click", displaySavedPosters);
+=======
+savedPosterButton.addEventListener("click", displaySavedPosters);
+>>>>>>> 4d063ed0155d4c462ef169b9cc0fcb8b26788a6a
 // "Back to Main" Button: Click Listener
 backButton.addEventListener("click", displayMainPage);
 // "Nevermind, take me back!" Button: Click Listener
 nevermindButton.addEventListener("click", displayMainPage);
 // "Show my poster" Button: Click Listener
 showMyPosterButton.addEventListener("click", createCustomPoster);
+<<<<<<< HEAD
 // "Save poster" Button: Click Listener
 savedPosterButton.addEventListener("click", savePoster);
+=======
+
+>>>>>>> 4d063ed0155d4c462ef169b9cc0fcb8b26788a6a
 // functions and event handlers go here 👇
 
 function getRandomIndex(array) {
@@ -184,6 +198,12 @@ function createRandomPoster() {
   var poster = createPoster(images[getRandomIndex(images)], titles[getRandomIndex(titles)],quotes[getRandomIndex(quotes)]);
   return poster;
 }
+<<<<<<< HEAD
+=======
+
+function displayPoster() {
+  var poster = createRandomPoster();
+>>>>>>> 4d063ed0155d4c462ef169b9cc0fcb8b26788a6a
 
 function displayPoster() {
   var poster = createRandomPoster();
@@ -191,6 +211,7 @@ function displayPoster() {
   titleElement.innerHTML = poster.title;
   imageElement.src = poster.imageURL;
   quoteElement.innerHTML = poster.quote;
+<<<<<<< HEAD
 }
 
 function displayMainPage() {
@@ -211,6 +232,26 @@ function displaySavedPosters() {
   
 }
 
+=======
+}
+
+function displayMainPage() {
+  posterMainPage.classList.remove('hidden');
+  posterSavedPage.classList.add('hidden');
+  posterFormPage.classList.add('hidden');
+}
+
+function displayPosterForm() {
+  posterFormPage.classList.remove("hidden");
+  posterMainPage.classList.add('hidden');
+} 
+
+function displaySavedPosters() {
+  posterSavedPage.classList.remove('hidden');
+  posterMainPage.classList.add('hidden');
+}
+
+>>>>>>> 4d063ed0155d4c462ef169b9cc0fcb8b26788a6a
 function createCustomPoster() {
   event.preventDefault()
   var poster = createPoster(customUrlInput.value, customTitleInput.value, customQuoteInput.value);
@@ -221,6 +262,7 @@ function createCustomPoster() {
   quoteElement.innerHTML = poster.quote;
 }
 
+<<<<<<< HEAD
 function savePoster () {
   if(!savedPosters.includes(currentPoster)) {
     savedPosters.push(currentPoster);
@@ -255,3 +297,5 @@ function createPosterGrid() {
     grid.appendChild(posterElement)
   }
 }
+=======
+>>>>>>> 4d063ed0155d4c462ef169b9cc0fcb8b26788a6a
